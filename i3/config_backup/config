@@ -208,12 +208,12 @@ client.background       #2D353B
 # Increase brightness
 #bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 
-#bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set +10%
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set +10%
 
 # Decrease brightness
 #bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
-#bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 10%-
-exec --no-startup-id redshift -O 3200K
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 10%-
+exec --no-startup-id redshift -O 3200
 bindsym Mod4+Shift+s exec flameshot gui
 bindsym Mod4+L exec i3lock
 exec --no-startup-id xinput set-prop "MSFT0001:00 04F3:3140 Touchpad" "libinput Natural Scrolling Enabled" 1
