@@ -196,7 +196,7 @@ gaps inner 10px
 gaps outer 0px
 #exec --no-startup-id polybar example
 bindsym $mod+e exec nemo
-exec_always --no-startup-id feh --bg-scale ~/Pictures/lightforrest.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/chinatownbright.png
 for_window [class="^.*"] border pixel 2 
 #client.focused           #FFFFFF #FFFFFFF #FFFFFFF #FFFFFFF #FFFFFFF 
 client.focused          #A7C080 #A7C080 #2D353B #A7C080 #A7C080
