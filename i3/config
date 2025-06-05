@@ -58,7 +58,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
+bindsym $mod+d exec "rofi -modi drun,run -show drun -show-icons"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -138,17 +138,17 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+# move focused container to workspace AND switch to that workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -194,11 +194,11 @@ bindsym $mod+r mode "resize"
 #exec_always --no-startup-id xinput set-prop "Gaming Mouse" "libinput Accel Speed" -0.8
 gaps inner 10px
 gaps outer 0px
-exec --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle
 #exec --no-startup-id polybar example
 bindsym $mod+e exec nemo
 exec_always --no-startup-id feh --bg-scale ~/Pictures/lightforrest.jpg
 for_window [class="^.*"] border pixel 2 
+#client.focused           #FFFFFF #FFFFFFF #FFFFFFF #FFFFFFF #FFFFFFF 
 client.focused          #A7C080 #A7C080 #2D353B #A7C080 #A7C080
 client.focused_inactive #475258 #475258 #D3C6AA #475258 #475258
 client.unfocused        #2D353B #2D353B #D3C6AA #2D353B #2D353B
@@ -213,12 +213,15 @@ client.background       #2D353B
 # Decrease brightness
 #bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 #bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 10%-
-exec --no-startup-id redshift -O 3200K
 bindsym Mod4+Shift+s exec flameshot gui
 bindsym Mod4+L exec i3lock
 exec --no-startup-id xinput set-prop "MSFT0001:00 04F3:3140 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always xfsettingsd
+exec_always --no-startup-id xfsettingsd
 bindsym $mod+o exec xfce4-settings-manager
 exec --no-startup-id picom
 exec --no-startup-id xfce4-panel
 focus_follows_mouse no
+focus_wrapping no
+exec_always --no-startup-id redshift -P -O 4000K
+#exec_always --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle
+#exec --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle

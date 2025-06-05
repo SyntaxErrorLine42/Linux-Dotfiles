@@ -9,10 +9,10 @@
       <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="26"/>
-      <property name="background-style" type="empty"/>
+      <property name="background-style" type="uint" value="0"/>
       <property name="background-alpha" type="empty"/>
-      <property name="enter-opacity" type="empty"/>
-      <property name="leave-opacity" type="empty"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
       <property name="icon-size" type="uint" value="16"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
@@ -28,6 +28,7 @@
         <value type="int" value="14"/>
         <value type="int" value="7"/>
         <value type="int" value="13"/>
+        <value type="int" value="8"/>
       </property>
       <property name="mode" type="uint" value="0"/>
       <property name="nrows" type="uint" value="1"/>
@@ -75,6 +76,8 @@
       <property name="middle-click" type="empty"/>
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="redshift-gtk"/>
+        <value type="string" value="sticky.py"/>
         <value type="string" value="mintupdate.py"/>
         <value type="string" value="blueman"/>
         <value type="string" value="tray.py"/>
@@ -113,7 +116,7 @@
       <property name="rows" type="uint" value="1"/>
       <property name="miniature-view" type="bool" value="false"/>
       <property name="numbering" type="bool" value="false"/>
-      <property name="workspace-scrolling" type="bool" value="true"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
       <property name="wrap-workspaces" type="bool" value="false"/>
     </property>
     <property name="plugin-4" type="string" value="xkb">
@@ -149,6 +152,11 @@
       </property>
       <property name="timeout" type="uint" value="2000"/>
       <property name="timeout-seconds" type="uint" value="2"/>
+    </property>
+    <property name="plugin-8" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="known-players" type="string" value="Brave"/>
+      <property name="volume-max" type="uint" value="150"/>
     </property>
   </property>
 </channel>
