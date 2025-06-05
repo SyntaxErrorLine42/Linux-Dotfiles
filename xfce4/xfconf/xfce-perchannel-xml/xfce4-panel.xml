@@ -53,9 +53,10 @@
         <value type="string" value="mintbackup.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
       </property>
-      <property name="button-title" type="string" value="Mint"/>
+      <property name="button-title" type="string" value=""/>
       <property name="custom-menu" type="bool" value="false"/>
       <property name="small" type="bool" value="false"/>
+      <property name="button-icon" type="string" value="linuxmint-logo-leaf"/>
     </property>
     <property name="plugin-3" type="string" value="separator">
       <property name="items" type="array">

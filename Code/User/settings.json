@@ -1,6 +1,12 @@
 {
     "terminal.external.linuxExec": "kitty",
     "terminal.explorerKind": "external",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "700",              // Medium weight, nice balance
+    "editor.fontLigatures": false,             // Enable ligatures (like `!==`, `->`)
+    "editor.letterSpacing": 0.3,
+    "editor.lineNumbers": "relative",
     "vim.easymotion": true,
     "vim.leader": " ",
     "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
@@ -53,9 +59,9 @@
         }
 ]
  
-    "vim.handleKeys": {
-        "<C-backspace>": false
-        "<C-j>": false
+    ,"vim.handleKeys": {
+        "<C-backspace>": false,
+        "<C-j>": false,
         "<C-k>": false
     },
     "editor.occurrencesHighlight": "off",
@@ -170,3 +176,4 @@
     },
     "code-runner.runInTerminal": true
 }
+
