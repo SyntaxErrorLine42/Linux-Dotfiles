@@ -4,7 +4,7 @@
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.fontSize": 14,
     "editor.fontWeight": "700",              // Medium weight, nice balance
-    "editor.fontLigatures": false,             // Enable ligatures (like `!==`, `->`)
+    "editor.fontLigatures": true,             // Enable ligatures (like `!==`, `->`)
     "editor.letterSpacing": 0.3,
     "editor.lineNumbers": "relative",
     "vim.easymotion": true,
@@ -69,7 +69,6 @@
     "workbench.layoutControl.enabled": false,
     "chat.commandCenter.enabled": false,
     "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden",
     "window.titleBarStyle": "native",
     "window.menuBarVisibility": "toggle",
     "terminal.integrated.defaultProfile.linux": "zsh",
@@ -174,6 +173,12 @@
         ".pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
         ".gleam": "gleam run -m $fileNameWithoutExt"
     },
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "editor.wordWrap": "on",
+    "extensions.ignoreRecommendations": true,
+    "workbench.activityBar.location": "hidden",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.restoreWindows": "none"
 }
 
