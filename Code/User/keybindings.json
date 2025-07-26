@@ -13,5 +13,22 @@
         "key": "ctrl+backspace",
         "command": "-deleteWordLeft",
         "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+    // Dodjeljuje 'shift+tab' skrolanje na prethodnu sugestiju
+    {
+        "key": "shift+tab",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+    // Osigurava da 'enter' uvijek prihvaća odabranu sugestiju kada je widget vidljiv
+    {
+        "key": "enter",
+        "command": "acceptSelectedSuggestion",
+        "when": "editorTextFocus && suggestWidgetVisible"
     }
 ]

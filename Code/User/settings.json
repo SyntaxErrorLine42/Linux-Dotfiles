@@ -3,7 +3,7 @@
     "terminal.explorerKind": "external",
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.fontSize": 14,
-    "editor.fontWeight": "700",              // Medium weight, nice balance
+    "editor.fontWeight": "600",              // Medium weight, nice balance
     "editor.fontLigatures": true,             // Enable ligatures (like `!==`, `->`)
     "editor.letterSpacing": 0.3,
     "editor.lineNumbers": "relative",
@@ -62,7 +62,8 @@
     ,"vim.handleKeys": {
         "<C-backspace>": false,
         "<C-j>": false,
-        "<C-k>": false
+        "<C-k>": false,
+        "<C-y>": false
     },
     "editor.occurrencesHighlight": "off",
     "window.commandCenter": false,
@@ -176,9 +177,23 @@
     "code-runner.runInTerminal": true,
     "editor.wordWrap": "on",
     "extensions.ignoreRecommendations": true,
-    "workbench.activityBar.location": "hidden",
     "git.openRepositoryInParentFolders": "never",
     "workbench.startupEditor": "newUntitledFile",
-    "window.restoreWindows": "none"
-}
+    "window.restoreWindows": "none",
+    "workbench.iconTheme": "vscode-icons",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
 
+    "editor.acceptSuggestionOnEnter": "on", // Osigurava da Enter prihvaća sugestiju
+    "editor.acceptSuggestionOnTab": "off",  // Sprečava Tab da prihvaća sugestiju
+    "editor.tabCompletion": "off",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "editor.cursorBlinking": "solid",
+    "workbench.activityBar.location": "hidden" // Onemogućuje Tab Completion, tako da Tab ne pokušava automatski dovršiti stvari
+                                            // Ako želite da Tab radi za SNIPPETE, ali ne za opće sugestije, postavite na "onlySnippets"
+}
