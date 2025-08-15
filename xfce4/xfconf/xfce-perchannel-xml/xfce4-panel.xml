@@ -16,7 +16,7 @@
       <property name="icon-size" type="uint" value="16"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
-        <value type="int" value="15"/>
+        <value type="int" value="2"/>
         <value type="int" value="3"/>
         <value type="int" value="5"/>
         <value type="int" value="6"/>
@@ -38,9 +38,10 @@
         <value type="double" value="0"/>
         <value type="double" value="0"/>
       </property>
-      <property name="output-name" type="string" value="Primary"/>
+      <property name="output-name" type="string" value="HDMI-A-0"/>
       <property name="length-adjust" type="bool" value="true"/>
-      <property name="enable-struts" type="bool" value="true"/>
+      <property name="enable-struts" type="bool" value="false"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
     </property>
     <property name="dark-mode" type="bool" value="true"/>
   </property>
@@ -105,6 +106,9 @@
         <value type="string" value="clipman"/>
       </property>
       <property name="icon-size" type="int" value="22"/>
+      <property name="hidden-items" type="array">
+        <value type="string" value="flameshot"/>
+      </property>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -198,6 +202,12 @@
     <property name="plugin-15" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>
       <property name="miniature-view" type="bool" value="false"/>
+    </property>
+    <property name="plugin-2" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="false"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
+      <property name="numbering" type="bool" value="false"/>
     </property>
   </property>
 </channel>
