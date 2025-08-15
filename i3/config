@@ -235,4 +235,4 @@ exec_always --no-startup-id redshift -P -O 4500K
 exec --no-startup-id xfce4-clipman
 bindsym Mod4+v exec xfce4-clipman-history
 bindsym $mod+m exec kitty lf
-exec --no-startup-id sh -c "sleep 1 && i3-msg reload"
+exec --no-startup-id sh -c "sleep 1 && i3-msg restart"
