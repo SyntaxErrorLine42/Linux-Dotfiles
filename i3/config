@@ -94,7 +94,7 @@ bindsym $mod+semicolon split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
@@ -235,3 +235,4 @@ exec_always --no-startup-id redshift -P -O 4500K
 exec --no-startup-id xfce4-clipman
 bindsym Mod4+v exec xfce4-clipman-history
 bindsym $mod+m exec kitty lf
+exec --no-startup-id i3-msg reload
