@@ -1,3 +1,1 @@
 Feel free to steal them!
-nvim: https://github.com/NvChad/NvChad
-Currently working on full neovim distro from scratch...
