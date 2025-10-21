@@ -86,6 +86,7 @@ plugins=(
   command-not-found
 )
 
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -139,10 +140,23 @@ bindkey -r "^J"
 export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# --- old NVM installation, i use FNM now since NVM is painfully slow ---
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# fnm, i dont use it anymore, TOO SLOW BRUH, IMMA JUST STICK TO COMPILED BINARY NODE
+# FNM_PATH="/home/luka/.local/share/fnm"
+# if [ -d "$FNM_PATH" ]; then
+#   export PATH="$FNM_PATH:$PATH"
+#   eval "`fnm env`"
+# fi
+# eval "$(fnm env --use-on-cd)"
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# Lazy load ng completion
+ng() {
+  unset -f ng
+  source <(command ng completion script)
+  ng "$@"
+}

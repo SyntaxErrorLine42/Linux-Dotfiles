@@ -71,7 +71,6 @@
     "chat.commandCenter.enabled": false,
     "editor.minimap.enabled": false,
     "window.titleBarStyle": "native",
-    "window.menuBarVisibility": "toggle",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "workbench.colorTheme": "Dark Horizon",
     "code-runner.saveAllFilesBeforeRun": true,
@@ -194,6 +193,6 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "editor.cursorBlinking": "solid",
-    "workbench.activityBar.location": "hidden" // Onemogućuje Tab Completion, tako da Tab ne pokušava automatski dovršiti stvari
+    "window.menuBarVisibility": "toggle" // Onemogućuje Tab Completion, tako da Tab ne pokušava automatski dovršiti stvari
                                             // Ako želite da Tab radi za SNIPPETE, ali ne za opće sugestije, postavite na "onlySnippets"
 }
