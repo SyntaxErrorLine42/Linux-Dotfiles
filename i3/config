@@ -236,5 +236,5 @@ exec --no-startup-id xfce4-clipman
 bindsym Mod4+v exec xfce4-clipman-history
 bindsym $mod+m exec kitty lf
 exec --no-startup-id sh -c "sleep 1 && i3-msg restart"
-bindsym Mod4+d exec killall picom
-bindsym Mod4+Shift+d exec picom
+bindsym Mod4+d exec picom
+bindsym Mod4+Shift+d exec killall picom
