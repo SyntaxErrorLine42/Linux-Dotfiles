@@ -10,6 +10,7 @@
     "vim.easymotion": true,
     "vim.leader": " ",
     "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+    "vim.disableExtension": true,
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
@@ -66,11 +67,7 @@
         "<C-y>": false
     },
     "editor.occurrencesHighlight": "off",
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
-    "chat.commandCenter.enabled": false,
     "editor.minimap.enabled": false,
-    "window.titleBarStyle": "native",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "workbench.colorTheme": "Dark Horizon",
     "code-runner.saveAllFilesBeforeRun": true,
@@ -178,7 +175,6 @@
     "extensions.ignoreRecommendations": true,
     "git.openRepositoryInParentFolders": "never",
     "workbench.startupEditor": "newUntitledFile",
-    "window.restoreWindows": "none",
     "workbench.iconTheme": "vscode-icons",
     "github.copilot.enable": {
         "*": false,
@@ -193,6 +189,6 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "editor.cursorBlinking": "solid",
-    "window.menuBarVisibility": "toggle" // Onemogućuje Tab Completion, tako da Tab ne pokušava automatski dovršiti stvari
+    "chat.commandCenter.enabled": false // Onemogućuje Tab Completion, tako da Tab ne pokušava automatski dovršiti stvari
                                             // Ako želite da Tab radi za SNIPPETE, ali ne za opće sugestije, postavite na "onlySnippets"
 }
