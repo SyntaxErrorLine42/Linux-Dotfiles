@@ -238,3 +238,5 @@ bindsym $mod+m exec kitty lf
 exec --no-startup-id sh -c "sleep 1 && i3-msg restart"
 bindsym Mod4+d exec picom
 bindsym Mod4+Shift+d exec killall picom
+# My custom script for text extraction out of the image
+bindsym Mod4+Shift+a exec snip-ocr
