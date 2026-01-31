@@ -1,0 +1,56 @@
+/* ┌────────────────────────────────────────────────────────────┐
+ * │ POLYBAR ISLANDS - Rofi Message Theme                       │
+ * │ Error/info message display                                 │
+ * └────────────────────────────────────────────────────────────┘ */
+
+* {
+    background:     #1a1a1aE6;
+    background-alt: #2a2a2aFF;
+    foreground:     #E0E0E0FF;
+    urgent:         #FF5555FF;
+    
+    border-color:   #2a2a2aFF;
+    
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    transparency:    "real";
+    location:        center;
+    anchor:          center;
+    fullscreen:      false;
+    width:           280px;
+    x-offset:        0px;
+    y-offset:        0px;
+    
+    enabled:         true;
+    border-radius:   12px;
+    border:          2px solid;
+    border-color:    @border-color;
+    cursor:          "default";
+    background-color: @background;
+}
+
+mainbox {
+    enabled:         true;
+    spacing:         0px;
+    padding:         20px;
+    background-color: transparent;
+    children:        [ "message" ];
+}
+
+message {
+    enabled:         true;
+    margin:          0px;
+    padding:         12px;
+    border-radius:   8px;
+    background-color: @background-alt;
+    text-color:      @foreground;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:      @foreground;
+    vertical-align:  0.5;
+    horizontal-align: 0.5;
+}

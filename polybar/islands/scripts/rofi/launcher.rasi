@@ -1,0 +1,162 @@
+/* ┌────────────────────────────────────────────────────────────┐
+ * │ POLYBAR ISLANDS - Rofi Launcher Theme                      │
+ * │ Application launcher with island aesthetic                 │
+ * └────────────────────────────────────────────────────────────┘ */
+
+* {
+    background:     #1a1a1aE6;
+    background-alt: #2a2a2aFF;
+    foreground:     #E0E0E0FF;
+    selected:       #5294E2FF;
+    active:         #50FA7BFF;
+    urgent:         #FF5555FF;
+    
+    border-color:   #2a2a2aFF;
+    
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+configuration {
+    modi:            "drun,run,window";
+    show-icons:      true;
+    display-drun:    "Apps";
+    display-run:     "Run";
+    display-window:  "Windows";
+    drun-display-format: "{name}";
+    window-format:   "{w} · {c} · {t}";
+}
+
+window {
+    transparency:    "real";
+    location:        center;
+    anchor:          center;
+    fullscreen:      false;
+    width:           500px;
+    x-offset:        0px;
+    y-offset:        0px;
+    
+    enabled:         true;
+    border-radius:   15px;
+    border:          2px solid;
+    border-color:    @border-color;
+    cursor:          "default";
+    background-color: @background;
+}
+
+mainbox {
+    enabled:         true;
+    spacing:         15px;
+    padding:         25px;
+    background-color: transparent;
+    children:        [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:         true;
+    spacing:         10px;
+    padding:         0px;
+    background-color: transparent;
+    text-color:      @foreground;
+    children:        [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:         true;
+    expand:          false;
+    str:             "󰀻";
+    padding:         12px 16px;
+    border-radius:   10px;
+    background-color: @background-alt;
+    text-color:      @selected;
+}
+
+entry {
+    enabled:         true;
+    expand:          true;
+    padding:         12px;
+    border-radius:   10px;
+    background-color: @background-alt;
+    text-color:      @foreground;
+    cursor:          text;
+    placeholder:     "Search...";
+    placeholder-color: #707070;
+}
+
+listview {
+    enabled:         true;
+    columns:         1;
+    lines:           8;
+    cycle:           true;
+    dynamic:         true;
+    scrollbar:       false;
+    layout:          vertical;
+    reverse:         false;
+    fixed-height:    true;
+    fixed-columns:   true;
+    
+    spacing:         8px;
+    background-color: transparent;
+    text-color:      @foreground;
+    cursor:          "default";
+}
+
+element {
+    enabled:         true;
+    spacing:         12px;
+    padding:         10px 12px;
+    border-radius:   10px;
+    background-color: @background-alt;
+    text-color:      @foreground;
+    cursor:          pointer;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color:      inherit;
+    size:            28px;
+    cursor:          inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:      inherit;
+    cursor:          inherit;
+    vertical-align:  0.5;
+    horizontal-align: 0.0;
+}
+
+element normal.normal {
+    background-color: @background-alt;
+    text-color:      @foreground;
+}
+
+element alternate.normal {
+    background-color: @background-alt;
+    text-color:      @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color:      @background;
+}
+
+element normal.urgent,
+element alternate.urgent,
+element selected.urgent {
+    background-color: @urgent;
+    text-color:      @background;
+}
+
+element normal.active,
+element alternate.active,
+element selected.active {
+    background-color: @active;
+    text-color:      @background;
+}
+
+scrollbar {
+    handle-width:    5px;
+    handle-color:    @selected;
+    border-radius:   5px;
+    background-color: @background-alt;
+}

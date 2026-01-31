@@ -193,10 +193,11 @@ bindsym $mod+r mode "resize"
 #moje
 #exec_always --no-startup-id xinput set-prop "Gaming Mouse" "libinput Accel Speed" -0.8
 gaps inner 10px
-gaps outer 0px
+gaps outer 3px
+gaps top -4px
 #exec --no-startup-id polybar example
 bindsym $mod+e exec nemo
-exec_always --no-startup-id feh --bg-scale ~/Pictures/beach.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/lightforrest.jpg
 for_window [class="^.*"] border pixel 2 
 #client.focused          #A7C080 #A7C080 #2D353B #A7C080 #A7C080
 #client.focused_inactive #475258 #475258 #D3C6AA #475258 #475258
@@ -205,7 +206,7 @@ for_window [class="^.*"] border pixel 2
 #client.placeholder      #2D353B #2D353B #D3C6AA #2D353B #2D353B
 #client.background       #2D353B
 
-client.focused          #BBBBBB #BBBBBB #BBBBBB #BBBBBB #BBBBBB
+client.focused          #FFFFFF #FFFFFF #FFFFFF #FFFFFF #FFFFFF
 client.focused_inactive #444444 #444444 #444444 #444444 #444444
 client.unfocused        #333333 #333333 #333333 #333333 #333333
 client.urgent           #333333 #333333 #333333 #333333 #333333
@@ -226,7 +227,7 @@ exec --no-startup-id xinput set-prop "MSFT0001:00 04F3:3140 Touchpad" "libinput 
 exec_always --no-startup-id xfsettingsd
 bindsym $mod+o exec xfce4-settings-manager
 exec --no-startup-id picom
-exec_always --no-startup-id xfce4-panel
+exec_always --no-startup-id ~/.config/polybar/islands/launch.sh
 focus_follows_mouse no
 focus_wrapping no
 exec_always --no-startup-id redshift -P -O 4500K
