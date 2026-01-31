@@ -2,33 +2,20 @@
 
 # ┌────────────────────────────────────────────────────────────┐
 # │ POLYBAR ISLANDS - Notification Status Script               │
-# │ Shows dunst notification status (paused/active)            │
+# │ Shows XFCE4-notifyd status (DND mode indicator)            │
 # └────────────────────────────────────────────────────────────┘
 
-# Check if dunst is running
-if ! pgrep -x dunst > /dev/null; then
+# Check if XFCE4-notifyd is running
+if ! pgrep -x xfce4-notifyd > /dev/null; then
     echo "󰂛"
     exit 0
 fi
 
-# Check if notifications are paused
-if command -v dunstctl &> /dev/null; then
-    paused=$(dunstctl is-paused)
-    count=$(dunstctl count waiting)
-    
-    if [[ "$paused" == "true" ]]; then
-        if [[ $count -gt 0 ]]; then
-            echo "󰂛 $count"
-        else
-            echo "󰂛"
-        fi
-    else
-        if [[ $count -gt 0 ]]; then
-            echo "󰂚 $count"
-        else
-            echo "󰂜"
-        fi
-    fi
+# Check DND mode using xfconf
+dnd_enabled=$(xfconf-query -c xfce4-notifyd -p /do-not-disturb 2>/dev/null)
+
+if [[ "$dnd_enabled" == "true" ]]; then
+    echo "󰂛"
 else
-    echo "󰂜"
+    echo ""
 fi

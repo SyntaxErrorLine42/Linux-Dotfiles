@@ -47,7 +47,7 @@ get_battery() {
         status=$(cat "$battery_path/status" 2>/dev/null)
         
         if [[ "$status" == "Charging" ]]; then
-            echo "󰂄 ${capacity}%"
+            echo "󰂄 ${capacity} %"
         elif [[ "$status" == "Full" ]]; then
             echo "󰁹 Full"
         else
