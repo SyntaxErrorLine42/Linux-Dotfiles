@@ -14,7 +14,6 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch spacer bar first (reserves space for windows)
-polybar -q spacer -c "$DIR"/config.ini &
 
 # Launch visual island bars
 polybar -q left -c "$DIR"/config.ini &
