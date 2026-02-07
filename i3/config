@@ -50,7 +50,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -194,7 +194,7 @@ bindsym $mod+r mode "resize"
 #exec_always --no-startup-id xinput set-prop "Gaming Mouse" "libinput Accel Speed" -0.8
 gaps inner 10px
 gaps outer 3px
-gaps top -4px
+gaps top 38px
 #exec --no-startup-id polybar example
 bindsym $mod+e exec nemo
 exec_always --no-startup-id feh --bg-scale ~/Pictures/lightforrest.jpg
@@ -247,7 +247,7 @@ exec_always --no-startup-id redshift -P -O 4500K
 #exec --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle
 exec_always --no-startup-id copyq
 bindsym Mod4+v exec --no-startup-id copyq toggle
-bindsym $mod+m exec kitty lf
+bindsym $mod+m exec alacritty -e lf
 exec --no-startup-id sh -c "sleep 1 && i3-msg restart"
 bindsym Mod4+d exec picom
 bindsym Mod4+Shift+d exec killall picom
