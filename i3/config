@@ -253,3 +253,4 @@ bindsym Mod4+d exec picom
 bindsym Mod4+Shift+d exec killall picom
 # My custom script for text extraction out of the image
 bindsym Mod4+Shift+a exec snip-ocr
+exec_always --no-startup-id gromit-mpx
