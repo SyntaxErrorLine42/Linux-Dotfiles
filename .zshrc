@@ -160,3 +160,11 @@ ng() {
   source <(command ng completion script)
   ng "$@"
 }
+
+# bun completions
+[ -s "/home/luka/.bun/_bun" ] && source "/home/luka/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+eval "$(dotnet completions script zsh)"
