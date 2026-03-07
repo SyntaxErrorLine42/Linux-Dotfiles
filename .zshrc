@@ -128,6 +128,7 @@ alias python='python3'
 alias py='python3'
 alias vi='nvim'
 alias rm='trash-put'
+alias lg='lazygit'
 
 # Custom cd function to list directory contents after changing
 function cd {
