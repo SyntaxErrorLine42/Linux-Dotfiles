@@ -122,12 +122,13 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #moje
 #alias rm='rm -i'
-alias mv='mv -i'
-#neofetch ne smije biti ovdje
+alias mv='mv -iv'
+alias cp='cp -iv'
 alias python='python3'
 alias py='python3'
 alias vi='nvim'
 alias rm='trash-put'
+
 # Custom cd function to list directory contents after changing
 function cd {
   builtin cd "$@"
