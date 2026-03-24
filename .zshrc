@@ -139,13 +139,28 @@ function cd {
 }
 bindkey -r "^J"
 
-export PATH="$PATH:/opt/nvim/"
-export PATH="$PATH:$(go env GOPATH)/bin"
+# export PATH="$PATH:/opt/nvim/"
+# export PATH="$PATH:$(go env GOPATH)/bin"
 
-# --- old NVM installation, i use FNM now since NVM is painfully slow ---
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# --- Lazy NVM load ---
+export NVM_DIR="$HOME/.nvm"
+typeset -g __NVM_LAZY_LOADED=0
+__nvm_lazy_load() {
+  (( __NVM_LAZY_LOADED )) && return 0
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" >/dev/null 2>&1
+  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion" >/dev/null 2>&1
+  __NVM_LAZY_LOADED=1
+}
+nvm()  { __nvm_lazy_load; nvm "$@"; }
+node() { __nvm_lazy_load; command node "$@"; }
+npm()  { __nvm_lazy_load; command npm "$@"; }
+npx()  { __nvm_lazy_load; command npx "$@"; }
+__nvm_lazy_complete() {
+  __nvm_lazy_load
+  local comp="_${words[1]}"
+  (( $+functions[$comp] )) && "$comp" || _default
+}
+compdef __nvm_lazy_complete nvm node npm npx
 
 # fnm, i dont use it anymore, TOO SLOW BRUH, IMMA JUST STICK TO COMPILED BINARY NODE
 # FNM_PATH="/home/luka/.local/share/fnm"
@@ -169,4 +184,19 @@ ng() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-eval "$(dotnet completions script zsh)"
+
+# dotnet completions (LAZY)
+typeset -g __DOTNET_LAZY_LOADED=0
+__dotnet_lazy_load() {
+  (( __DOTNET_LAZY_LOADED )) && return 0
+  source <(command dotnet completions script zsh 2>/dev/null) 2>/dev/null >/dev/null
+  __DOTNET_LAZY_LOADED=1
+  unfunction dotnet 2>/dev/null || true
+  compdef _dotnet dotnet 2>/dev/null || true
+}
+dotnet() { __dotnet_lazy_load; command dotnet "$@"; }
+__dotnet_lazy_complete() {
+  __dotnet_lazy_load
+  (( $+functions[_dotnet] )) && _dotnet || _default
+}
+compdef __dotnet_lazy_complete dotnet
