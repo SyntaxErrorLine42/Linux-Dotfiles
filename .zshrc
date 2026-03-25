@@ -209,3 +209,13 @@ __dotnet_lazy_complete() {
   (( $+functions[_dotnet] )) && _dotnet || _default
 }
 compdef __dotnet_lazy_complete dotnet
+
+# Function for sys linking the node stuff to my bin path
+# Call this when nvm node is updated
+nvm_symlink_globals() {
+    local NVM_BIN="$HOME/.nvm/versions/node/$(nvm current)/bin"
+    sudo ln -sf "$NVM_BIN/node" /usr/local/bin/node
+    sudo ln -sf "$NVM_BIN/npm"  /usr/local/bin/npm
+    sudo ln -sf "$NVM_BIN/npx"  /usr/local/bin/npx
+    sudo ln -sf "$NVM_BIN/ng"   /usr/local/bin/ng
+}
