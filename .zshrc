@@ -172,11 +172,20 @@ compdef __nvm_lazy_complete nvm node npm npx
 
 # Load Angular CLI autocompletion.
 # Lazy load ng completion
-ng() {
-  unset -f ng
-  source <(command ng completion script)
-  ng "$@"
+typeset -g __NG_LAZY_LOADED=0
+__ng_lazy_load() {
+  (( __NG_LAZY_LOADED )) && return 0
+  __nvm_lazy_load
+  source <(command ng completion script 2>/dev/null) 2>/dev/null
+  __NG_LAZY_LOADED=1
+  unfunction ng 2>/dev/null || true
 }
+ng() { __ng_lazy_load; command ng "$@"; }
+__ng_lazy_complete() {
+  __ng_lazy_load
+  (( $+functions[_ng] )) && _ng || _default
+}
+compdef __ng_lazy_complete ng
 
 # bun completions
 [ -s "/home/luka/.bun/_bun" ] && source "/home/luka/.bun/_bun"
