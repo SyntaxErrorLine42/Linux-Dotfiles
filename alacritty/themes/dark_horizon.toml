@@ -1,0 +1,32 @@
+# Dark Horizon theme
+[colors.primary]
+background = "#0e0e0e"
+foreground = "#d0d4dd"
+
+[colors.cursor]
+cursor = "#b0b0b0"
+text   = "CellBackground"
+
+[colors.selection]
+background = "#4f0786"
+foreground = "#d0d4dd"
+
+[colors.normal]
+black   = "#1a1a1a"
+red     = "#e81118"
+green   = "#26b653"
+yellow  = "#d9a80e"
+blue    = "#2477c0"
+magenta = "#464fad"
+cyan    = "#0d74c2"
+white   = "#d0d4dd"
+
+[colors.bright]
+black   = "#d0d4dd"
+red     = "#c8302a"
+green   = "#18bf55"
+yellow  = "#ddb407"
+blue    = "#0d74c2"
+magenta = "#4947af"
+cyan    = "#0d76c9"
+white   = "#eaeaea"
