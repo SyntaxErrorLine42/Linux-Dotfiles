@@ -87,6 +87,7 @@
       <property name="middle-click" type="empty"/>
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="blueman-tray"/>
         <value type="string" value="clipman"/>
         <value type="string" value="redshift-gtk"/>
@@ -97,6 +98,7 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="chrome_status_icon_1"/>
         <value type="string" value="SimpleScreenRecorder"/>
         <value type="string" value="flameshot"/>
         <value type="string" value="blueman"/>
@@ -194,6 +196,7 @@
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="skip-action-on-key-down" type="bool" value="false"/>
+        <property name="inhibit" type="bool" value="false"/>
       </property>
       <property name="settings" type="empty">
         <property name="max-images-in-history" type="uint" value="1"/>

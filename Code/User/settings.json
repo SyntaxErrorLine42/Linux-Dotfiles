@@ -190,6 +190,43 @@
     "editor.cursorBlinking": "solid",
     "chat.commandCenter.enabled": false,
     "window.customMenuBarAltFocus": false,
-    "window.enableMenuBarMnemonics": false // Onemogućuje Tab Completion, tako da Tab ne pokušava automatski dovršiti stvari
-                                            // Ako želite da Tab radi za SNIPPETE, ali ne za opće sugestije, postavite na "onlySnippets"
+    "window.enableMenuBarMnemonics": false,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "chat.tools.terminal.autoApprove": {
+        "rg": true,
+        "nvim": true
+    },
+    "pgsql.serverGroups": [
+        {
+            "name": "Servers",
+            "id": "E39F5A88-D7E8-493A-AA68-4C5E17727746",
+            "isDefault": true
+        }
+    ],
+    "pgsql.connections": [
+        {
+            "id": "DD3129FF-EE8D-4491-830A-8777E58261EC",
+            "groupId": "E39F5A88-D7E8-493A-AA68-4C5E17727746",
+            "authenticationType": "SqlLogin",
+            "connectTimeout": "5",
+            "applicationName": "vscode-pgsql",
+            "clientEncoding": "utf8",
+            "sslmode": "prefer",
+            "sshSavePassword": true,
+            "savePassword": true,
+            "sslRootCertMode": "none",
+            "server": "localhost",
+            "user": "postgres",
+            "password": "",
+            "database": "roadmapai",
+            "profileName": "RoadmapAI",
+            "expiresOn": 0,
+            "sshPassword": ""
+        }
+    ],
+    "workbench.tree.indent": 15,
+    "chat.mcp.autostart": "never",
+    "typescript.tsserver.maxTsServerMemory": 768,
+    "typescript.tsserver.useSyntaxServer": "never"
 }

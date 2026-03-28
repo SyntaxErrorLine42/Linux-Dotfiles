@@ -1,0 +1,67 @@
+[window]
+decorations = "none" # No title bar
+padding = { x = 1, y = 9 } # for monitor
+# padding = { x = 1, y = 6 } # for laptop
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 11.0 # for monitor
+# size = 8.0 # for laptop
+offset = { x = 0, y = 0 } # for monitor
+# offset = { x = 1, y = 0 } # for laptop
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "SemiBold"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[colors.primary]
+background = '#1e1e1e'
+foreground = '#d4d4d4'
+
+[colors.selection]
+text = '#d0d4dd'
+background = '#4f0786'
+
+[colors.cursor]
+cursor = '#d4d4d4'
+text = '#1e1e1e'
+
+[colors.normal]
+black =   '#1a1a1a'
+red =     '#e81118'
+green =   '#26b653'
+yellow =  '#d9a80e'
+blue =    '#2477c0'
+magenta = '#464fad'
+cyan =    '#0d74c2'
+white =   '#d0d4dd'
+
+[colors.bright]
+black =   '#d0d4dd'
+red =     '#c8302a'
+green =   '#18bf55'
+yellow =  '#ddb407'
+blue =    '#0d74c2'
+magenta = '#4947af'
+cyan =    '#0d76c9'
+white =   '#eaeaea'
+
+[[keyboard.bindings]]
+# Ctrl+Backspace fix
+chars = "\u0017"
+key = "Back"
+mods = "Control"
