@@ -160,10 +160,27 @@ __nvm_lazy_load() {
   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion" >/dev/null 2>&1
   __NVM_LAZY_LOADED=1
 }
+
+# Function for sys linking the node stuff to my bin path
+# Call this when nvm node is updated
+nvm_symlink() {
+    __nvm_lazy_load
+    local NVM_BIN="$HOME/.nvm/versions/node/$(node -v)/bin"
+    sudo ln -sf "$NVM_BIN/node" /usr/local/bin/node
+}
+
+# Lazy Loading Section
 nvm()  { __nvm_lazy_load; nvm "$@"; }
-node() { __nvm_lazy_load; command node "$@"; }
-npm()  { __nvm_lazy_load; command npm "$@"; }
-npx()  { __nvm_lazy_load; command npx "$@"; }
+# Loop that lazy loads every single npm package, depends on the fact that node is sys linked
+# This won't override the versions, it just uses the names of the bins to create lazy functions
+local NVM_BIN="$HOME/.nvm/versions/node/$(node -v)/bin"
+for bin in "$NVM_BIN"/*; do
+  local name=$(basename "$bin")
+  [[ "$name" == "node" ]] && continue
+  eval "${name}() { __nvm_lazy_load; command ${name} \"\$@\"; }"
+done
+
+# Lazy completions
 __nvm_lazy_complete() {
   __nvm_lazy_load
   local comp="_${words[1]}"
@@ -218,13 +235,3 @@ __dotnet_lazy_complete() {
   (( $+functions[_dotnet] )) && _dotnet || _default
 }
 compdef __dotnet_lazy_complete dotnet
-
-# Function for sys linking the node stuff to my bin path
-# Call this when nvm node is updated
-nvm_symlink_globals() {
-    local NODE_VERSION=$(node -v)
-    local NVM_BIN="$HOME/.nvm/versions/node/$NODE_VERSION/bin"
-    for bin in "$NVM_BIN"/*; do
-        sudo ln -sf "$bin" /usr/local/bin/$(basename "$bin")
-    done
-}
