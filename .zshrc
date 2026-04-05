@@ -150,12 +150,13 @@ __nvm_lazy_load() {
   # I have to drop this comment here since this is just insane
   # My lazy loading script works perfectly in new terminals, but it hangs in tmux new panes and windows (original tmux window is fine)
   # It drove me crazy, and the thing that messes it up is the nvm_auto that searches which version it should apply
-  # The fix: --no-use sourcing flag
+  # The fix: --no-use sourcing flag, and nvm use default --silent
   # Since we already have syslinks for our bins, we don't need that. The only functionality that is lost with this method
   # is not having automatic nvm use command call when cd-ing a repo with .nvmrc, but that is really not a big deal.
   # Even if you do enter a repo with a specific node version, idk bout y'all but imma always hit node -v to check what I'm using
   # I still have no clue how it hangs on new tmux panes, but works on the first one, literally insane
   [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use >/dev/null 2>&1
+  nvm use default --silent # You need this to load up npm packages
   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion" >/dev/null 2>&1
   __NVM_LAZY_LOADED=1
 }
