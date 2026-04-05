@@ -222,9 +222,9 @@ compdef __dotnet_lazy_complete dotnet
 # Function for sys linking the node stuff to my bin path
 # Call this when nvm node is updated
 nvm_symlink_globals() {
-    local NVM_BIN="$HOME/.nvm/versions/node/$(nvm current)/bin"
-    sudo ln -sf "$NVM_BIN/node" /usr/local/bin/node
-    sudo ln -sf "$NVM_BIN/npm"  /usr/local/bin/npm
-    sudo ln -sf "$NVM_BIN/npx"  /usr/local/bin/npx
-    sudo ln -sf "$NVM_BIN/ng"   /usr/local/bin/ng
+    local NODE_VERSION=$(node -v)
+    local NVM_BIN="$HOME/.nvm/versions/node/$NODE_VERSION/bin"
+    for bin in "$NVM_BIN"/*; do
+        sudo ln -sf "$bin" /usr/local/bin/$(basename "$bin")
+    done
 }
