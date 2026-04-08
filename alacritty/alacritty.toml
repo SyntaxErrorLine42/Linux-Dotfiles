@@ -40,3 +40,8 @@ mods = "Control"
 
 [cursor]
 style = "Block"          # Options: "Block", "Underline", "Beam"
+
+[[keyboard.bindings]]
+key = "Comma"
+mods = "Control"
+chars = "\u001b[44;5u"
