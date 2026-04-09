@@ -166,7 +166,9 @@ __nvm_lazy_load() {
 nvm_symlink() {
     __nvm_lazy_load
     local NVM_BIN="$HOME/.nvm/versions/node/$(node -v)/bin"
-    sudo ln -sf "$NVM_BIN/node" /usr/local/bin/node
+    for bin in "$NVM_BIN"/*; do
+        sudo ln -sf "$bin" /usr/local/bin/"$(basename "$bin")"
+    done
 }
 
 # Lazy Loading Section
@@ -235,3 +237,11 @@ __dotnet_lazy_complete() {
   (( $+functions[_dotnet] )) && _dotnet || _default
 }
 compdef __dotnet_lazy_complete dotnet
+
+# opencode
+export PATH=/home/luka/.opencode/bin:$PATH
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
