@@ -195,7 +195,10 @@
     "gitlens.ai.vscode.model": "copilot:gpt-4.1",
     "chat.tools.terminal.autoApprove": {
         "rg": true,
-        "nvim": true
+        "nvim": true,
+        "npx": true,
+        "dotnet build": true,
+        "npm run build": true
     },
     "pgsql.serverGroups": [
         {
@@ -228,5 +231,7 @@
     "workbench.tree.indent": 15,
     "chat.mcp.autostart": "never",
     "typescript.tsserver.maxTsServerMemory": 768,
-    "typescript.tsserver.useSyntaxServer": "never"
+    "typescript.tsserver.useSyntaxServer": "never",
+    "explorer.confirmDragAndDrop": false,
+    "chat.agent.maxRequests": 250,
 }
