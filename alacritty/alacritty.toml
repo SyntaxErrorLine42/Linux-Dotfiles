@@ -4,17 +4,17 @@ import = [
 
 [window]
 decorations = "none" # No title bar
-# padding = { x = 1, y = 9 } # for monitor
-padding = { x = 1, y = 6 } # for laptop
+padding = { x = 1, y = 9 } # for monitor
+# padding = { x = 1, y = 6 } # for laptop
 
 [colors]
 draw_bold_text_with_bright_colors = true
 
 [font]
-# size = 11.0 # for monitor
-size = 8.0 # for laptop
-# offset = { x = 0, y = 0 } # for monitor
-offset = { x = 1, y = 0 } # for laptop
+size = 11.0 # for monitor
+# size = 7.0 # for laptop
+offset = { x = 0, y = 0 } # for monitor
+# offset = { x = 1, y = 0 } # for laptop
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
