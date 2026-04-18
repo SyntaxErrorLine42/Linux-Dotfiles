@@ -4,8 +4,8 @@ import = [
 
 [window]
 decorations = "none" # No title bar
-# padding = { x = 1, y = 9 } # for monitor
-padding = { x = 1, y = 6 } # for laptop
+padding = { x = 1, y = 9 } # for monitor
+# padding = { x = 1, y = 6 } # for laptop
 
 [colors]
 draw_bold_text_with_bright_colors = true

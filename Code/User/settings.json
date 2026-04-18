@@ -174,7 +174,7 @@
     "extensions.ignoreRecommendations": true,
     "git.openRepositoryInParentFolders": "never",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
@@ -234,4 +234,5 @@
     "typescript.tsserver.useSyntaxServer": "never",
     "explorer.confirmDragAndDrop": false,
     "chat.agent.maxRequests": 250,
+    "workbench.colorTheme": "Catppuccin Macchiato",
 }
