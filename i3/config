@@ -213,6 +213,11 @@ for_window [class="copyq"] floating enable
 for_window [class="copyq"] resize set width 400 px height 500 px
 for_window [class="copyq"] move position center
 
+# WarmLight slider
+for_window [title="Screen Warmth"] floating enable
+for_window [title="Screen Warmth"] resize set width 300 px height 80 px
+for_window [title="Screen Warmth"] move position center
+
 
 # Everforest
 # target                 title     bg    text   indicator  border
