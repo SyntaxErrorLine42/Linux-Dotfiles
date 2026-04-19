@@ -214,9 +214,9 @@ for_window [class="copyq"] resize set width 400 px height 500 px
 for_window [class="copyq"] move position center
 
 # WarmLight slider
-for_window [title="Screen Warmth"] floating enable
-for_window [title="Screen Warmth"] resize set width 300 px height 80 px
-for_window [title="Screen Warmth"] move position center
+for_window [title="Warm Light"] floating enable
+for_window [title="Warm Light"] resize set width 300 px height 80 px
+for_window [title="Warm Light"] move position center
 
 
 # Everforest
@@ -263,7 +263,7 @@ exec --no-startup-id picom
 exec_always --no-startup-id ~/.config/polybar/islands/launch.sh
 focus_follows_mouse no
 focus_wrapping no
-exec_always --no-startup-id redshift -P -O 4500K
+exec_always --no-startup-id xsct 4500 1
 #exec_always --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle
 #exec --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle
 exec_always --no-startup-id copyq
