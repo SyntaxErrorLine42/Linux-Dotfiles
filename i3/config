@@ -218,6 +218,11 @@ for_window [title="Warm Light"] floating enable
 for_window [title="Warm Light"] resize set width 300 px height 80 px
 for_window [title="Warm Light"] move position center
 
+# WarmLight slider
+for_window [title="screenhider"] floating enable
+for_window [title="screenhider"] resize set width 700 px height 400 px
+for_window [title="screenhider"] move position center
+
 
 # Everforest
 # target                 title     bg    text   indicator  border
