@@ -198,7 +198,8 @@
         "nvim": true,
         "npx": true,
         "dotnet build": true,
-        "npm run build": true
+        "npm run build": true,
+        ".venv/bin/python": true
     },
     "pgsql.serverGroups": [
         {
