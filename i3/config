@@ -281,3 +281,4 @@ bindsym Mod4+Shift+d exec killall picom
 bindsym Mod4+Shift+a exec snip-ocr
 bindsym Mod1+g exec --no-startup-id gromit-mpx --active
 bindsym Mod1+Shift+g exec --no-startup-id gromit-mpx --quit
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & # Prompts u for a password when opening sudo apps in gui
