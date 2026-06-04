@@ -245,3 +245,6 @@ export PATH=/home/luka/.opencode/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# cargo path
+export PATH="$HOME/.cargo/bin:$PATH"
