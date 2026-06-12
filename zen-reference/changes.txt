@@ -1,3 +1,4 @@
 zen.theme.content-element-separation 0
 toolkit.legacyUserProfileCustomizations.stylesheets true
 zen.view.experimental-no-window-controls false
+pdfjs.forcePageColors true
