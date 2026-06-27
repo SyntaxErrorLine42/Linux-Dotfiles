@@ -273,7 +273,7 @@ exec_always --no-startup-id xsct 4500 1
 #exec --no-startup-id setxkbmap -layout us,hr -option grp:win_space_toggle
 exec_always --no-startup-id copyq
 bindsym Mod4+v exec --no-startup-id copyq toggle
-bindsym $mod+m exec alacritty -e lf
+bindsym $mod+m exec alacritty -e yazi
 exec --no-startup-id sh -c "sleep 1 && i3-msg restart"
 bindsym Mod4+d exec picom
 bindsym Mod4+Shift+d exec killall picom
