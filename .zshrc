@@ -130,6 +130,7 @@ alias vi='nvim'
 alias gvi='git diff --name-only | xargs nvim'
 alias rm='trash-put'
 alias lg='lazygit'
+alias ld='lazydocker'
 
 # Custom cd function to list directory contents after changing
 function cd {
