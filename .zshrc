@@ -127,6 +127,7 @@ alias cp='cp -iv'
 alias python='python3'
 alias py='python3'
 alias vi='nvim'
+alias gvi='git diff --name-only | xargs nvim'
 alias rm='trash-put'
 alias lg='lazygit'
 
@@ -246,5 +247,16 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+# go
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
+
+# neovim bob version manager
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
 # cargo path
 export PATH="$HOME/.cargo/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/luka/.local/bin:$PATH"
