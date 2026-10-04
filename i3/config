@@ -195,7 +195,7 @@ bindsym $mod+r mode "resize"
 #exec_always --no-startup-id xinput set-prop "Gaming Mouse" "libinput Accel Speed" -0.8
 gaps inner 10px
 gaps outer 3px
-gaps top 38px
+gaps top 22px
 #exec --no-startup-id polybar example
 bindsym $mod+e exec nemo
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpapers/catppuccin.jpg
@@ -223,6 +223,17 @@ for_window [title="screenhider"] floating enable
 for_window [title="screenhider"] resize set width 700 px height 400 px
 for_window [title="screenhider"] move position center
 
+# # Xfce4-panel
+# for_window [class="Xfce4-panel"] floating enable, move position 0 0, border none
+# exec_always --no-startup-id bash -c '\
+#   xfce4-panel & \
+#   sleep 1; \
+#   for id in $(xdotool search --class "Xfce4-panel"); do \
+#     xprop -id $id -format _NET_WM_WINDOW_TYPE 32a -set _NET_WM_WINDOW_TYPE _NET_WM_WINDOW_TYPE_NORMAL; \
+#   done; \
+#   sleep 0.5; \
+#   xfce4-panel-profiles load mypanel; \
+#   xfce4-panel -r'
 
 # Everforest
 # target                 title     bg    text   indicator  border
